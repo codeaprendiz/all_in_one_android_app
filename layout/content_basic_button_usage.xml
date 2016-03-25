@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_marginTop="50dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click the following buttons and see the result"
+        android:id="@+id/mainTextView"
+        android:layout_gravity="center_horizontal"
+        android:textSize="25dp"
+        android:layout_marginTop="10dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:text="Use me please !"
+            android:id="@+id/textViewSpinner" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner"
+            android:entries="@array/myentries"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:text="You can&apos;t leave me! Can you ?"
+            android:id="@+id/textViewButton"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:text=":)"
+            android:id="@+id/button"
+            android:onClick="onButtonClicked"
+            android:layout_weight="1" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:text="Hey! You gotta be kidding me. Can&apos;t you see here?"
+            android:id="@+id/textViewToggleButton"
+            android:layout_weight="1" />
+
+        <ToggleButton
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:text="New ToggleButton"
+            android:id="@+id/toggleButton"
+            android:layout_weight="1"
+            android:checked="false"
+            android:onClick="onToggleButtonClicked" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:text="Wanna try?"
+            android:id="@+id/textViewSwitch"
+            android:layout_weight="1" />
+
+        <Switch
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:id="@+id/switch1"
+            android:layout_weight="1"
+            android:checked="false"
+            android:text=":("
+            android:onClick="onSwitchClicked" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:text="That box right beside me! Put you head on that."
+            android:id="@+id/textViewCheckBox"
+            android:layout_weight="1" />
+
+        <CheckBox
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:text=":P"
+            android:id="@+id/checkBox"
+            android:checked="false"
+            android:layout_weight="1"
+            android:onClick="onCheckBoxClicked" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:text="That&apos;s it. You can do it."
+            android:id="@+id/textViewRadioButton"
+            android:layout_weight="1" />
+        <RadioGroup android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <RadioButton
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:text="B|"
+            android:id="@+id/radioButton"
+            android:layout_weight="1"
+            android:checked="false" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:text="Finally! You have the chance to do something useful."
+            android:id="@+id/textViewImageButton"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:id="@+id/imageButton"
+            android:src="@drawable/see_for_urself"
+            android:layout_weight="1"
+            android:onClick="onImageButtonClicked" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="So how do you rate this page!"
+            android:id="@+id/textViewRate"
+            android:gravity="fill_vertical|center_horizontal"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal">
+
+
+        <RatingBar
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            android:id="@+id/ratingBar"
+            android:layout_marginLeft="30dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:id="@+id/button2"
+            android:onClick="onSmallButtonClicked"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal">
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>

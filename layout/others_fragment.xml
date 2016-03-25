@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_gravity="center_vertical"
+       android:background="@drawable/brain_games" />
+
+    <ListView android:id="@+id/list_options_others_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/options_others"
+        android:fastScrollAlwaysVisible="false"
+        android:fastScrollEnabled="false" />
+
+</LinearLayout>

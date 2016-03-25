@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#212835"
+    android:id="@+id/fragmentLinearLayoutCalculator"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The first argument can be of any digits. Then give arithmatic operation you want to perform
+        . After that the second argument must be of only 1 digit. No need to press = you will directly get the answer.
+         After that you can continue the calculation if you want but the argument should be of only one digit.
+          :P button does not work :P."
+        android:textColor="#ffffff"
+        android:fontFamily="Roboto Condesned Light"
+        android:layout_margin="15dp"
+        android:typeface="serif"
+        android:textSize="18sp"
+        android:id="@+id/fragmentTextView"/>
+
+</LinearLayout>

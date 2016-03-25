@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <ImageView android:layout_width="match_parent"
+        android:layout_height="120dp"
+
+        android:contentDescription="This is an image"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/smart_android" />
+
+    <ListView android:id="@+id/list_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/options"
+        android:fastScrollAlwaysVisible="false"
+        android:fastScrollEnabled="false" />
+
+</LinearLayout>
