@@ -1,0 +1,69 @@
+<resources xmlns:xliff="http://schemas.android.com/tools">
+    <!-- Actions -->
+    <string name="action_toggle">Toggle indicator</string>
+    <string name="action_add_item">Add item</string>
+    <string name="action_remove_item">Remove item</string>
+    <string name="action_previous">Previous</string>
+    <string name="action_next">Next</string>
+    <string name="action_finish">Finish</string>
+    <string name="action_info">Photo info</string>
+    <string name="action_photo">View photo</string>
+
+    <!-- Titles -->
+    <string name="title_crossfade">Simple Crossfade</string>
+    <string name="title_card_flip">Card Flip</string>
+    <string name="title_screen_slide">Screen Slide</string>
+    <string name="title_zoom">Zoom</string>
+    <string name="title_layout_changes">Layout Changes</string>
+    <!--For copying the following line i imported something. I just copied the line and imported the default first option that popped-->
+    <string name="title_template_step">Step <xliff:g id="step_number">%1$d</xliff:g>: Lorem
+        Ipsum</string>
+
+
+    <!-- Accessibility-only descriptions -->
+    <string name="description_image_1">Image 1</string>
+    <string name="description_image_2">Image 2</string>
+    <string name="description_zoom_touch_close">Expanded image (touch to close)</string>
+
+    <!-- Messages -->
+    <string name="message_empty_layout_changes">Add an item above to get started.</string>
+    <string name="message_zoom_touch_expand">Touch a photo to expand it.</string>
+
+    <string name="app_name">All In One</string>
+    <string name="action_settings">Settings</string>
+    <string-array name="options">
+        <item>Basic Buttons</item>
+        <item>Messenger</item>
+        <item>Stopwatch</item>
+    </string-array>
+    <string-array name="options_others">
+        <item>Ship Sink Game</item>
+        <item>Play with Calculator</item>
+    </string-array>
+    <string-array name="options_animations">
+        <item>Card Flip</item>
+        <item>Zoom</item>
+        <item>Screen Slide</item>
+        <item>Simple Crossfade</item>
+        <item>Layout Changes</item>
+    </string-array>
+    <string-array name="myentries">
+        <item>Select Me</item>
+        <item>No me</item>
+        <item>You know me</item>
+        <item> -_- </item>
+    </string-array>
+    <string name="title_activity_basic_buttons_usage">basic_buttons_usage</string>
+    <string name="title_activity_stopwatch_activity">stopwatch_activity</string>
+    <string name="title_activity_create_message">create_message</string>
+    <string name="title_activity_ship_sink">ship_sink</string>
+    <string name="title_activity_calculator">calculator</string>
+    <string name="title_activity_crossfade">CrossfadeActivity</string>
+    <string name="lorem_ipsum"><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et magna ut erat elementum cursus in quis ipsum. Nam faucibus ultrices eros, vel tempor leo semper sit amet. Duis magna quam, congue vitae interdum nec, condimentum ut lectus. Sed commodo venenatis eros a dignissim. Nunc adipiscing turpis nec magna venenatis at ultricies ipsum bibendum. Sed volutpat urna quis nisi vulputate egestas. Etiam eu dui a enim lacinia dapibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.\n\nPhasellus orci mi, eleifend nec congue id, volutpat at neque. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer semper velit vel leo rutrum sed fermentum elit porta.]]></string>
+    <string name="title_activity_screen_slide">ScreenSlideActivity</string>
+    <string name="title_activity_card_flip">CardFlipActivity</string>
+    <string name="card_back_title">Angry Red Android</string>
+    <string name="card_back_description"><![CDATA[Lorem ipsum dolor sit]]></string>
+    <string name="title_activity_zoom">ZoomActivity</string>
+    <string name="title_activity_layout_changes">LayoutChangesActivity</string>
+</resources>
