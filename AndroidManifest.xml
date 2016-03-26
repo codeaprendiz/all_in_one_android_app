@@ -1,17 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="android.example.com.allinone">
+    package="com.example.android.sunshineapp">
+    <!-- This permission is necessary in order for Sunshine to perform network access. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Permissions required by the sync adapter -->
+    <uses-permission
+        android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission
+        android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission
+        android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/android"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme" >
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/ForecastTheme"
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,95 +28,50 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".basic_buttons_usage"
-            android:label="Basic Buttons"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:name=".DetailActivity"
+            android:label="@string/title_activity_detail"
+            android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="android.example.com.allinone.MainActivity" />
+                android:value="com.example.android.sunshineapp.MainActivity" />
         </activity>
         <activity
-            android:name=".stopwatch_activity"
-            android:label="Stopwatch"
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/SettingsTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="android.example.com.allinone.MainActivity" />
+                android:value="com.example.android.sunshineapp.MainActivity" />
         </activity>
-        <activity
-            android:name=".create_message"
-            android:label="Messenger"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+        <provider
+            android:authorities="@string/content_authority"
+            android:name=".data.WeatherProvider"
+            android:exported="false"
+            android:syncable="true" />
+
+        <!-- SyncAdapter's dummy authentication service -->
+        <service android:name=".sync.SunshineAuthenticatorService">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
             <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="android.example.com.allinone.MainActivity" />
-        </activity>
-        <activity
-            android:name=".ship_sink"
-            android:label="@string/title_activity_ship_sink"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+
+        <!-- The SyncAdapter service -->
+        <service
+            android:name=".sync.SunshineSyncService"
+            android:exported="true"
+            >
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
             <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="android.example.com.allinone.MainActivity" />
-        </activity>
-        <activity
-            android:name=".calculator"
-            android:label="@string/title_activity_calculator"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="android.example.com.allinone.MainActivity" />
-        </activity>
-        <activity
-            android:name=".CrossfadeActivity"
-            android:label="CrossFade"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="android.example.com.allinone.MainActivity" />
-        </activity>
-        <activity
-            android:name=".ScreenSlideActivity"
-            android:label="Slide Screen"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="android.example.com.allinone.MainActivity" />
-        </activity>
-        <activity
-            android:name=".CardFlipActivity"
-            android:label="Flip It :P"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="android.example.com.allinone.MainActivity" />
-        </activity>
-        <activity
-            android:name=".ZoomActivity"
-            android:label="@string/title_activity_zoom"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="android.example.com.allinone.MainActivity" />
-        </activity>
-        <activity
-            android:name=".LayoutChangesActivity"
-            android:label="@string/title_activity_layout_changes"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="android.example.com.allinone.MainActivity" />
-        </activity>
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/syncadapter" />
+        </service>
     </application>
 
 </manifest>
